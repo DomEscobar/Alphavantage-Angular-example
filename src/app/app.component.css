@@ -1,0 +1,24 @@
+button {
+  font-size: 14px;
+  outline: 0;
+  height: 46px;
+  margin-top: -8px;
+  background: #3b55e6;
+  border-radius: 55px;
+  margin-left: -25px;
+}
+
+
+.fullname {
+  color: white;
+  padding: 5px;
+  border-radius: 40px;
+  display: inline-block;
+  font-size: 11px;
+}
+
+.collection a.collection-item {
+  cursor: pointer;
+  font-size: 12px !important;
+  padding: 5px !important;
+}

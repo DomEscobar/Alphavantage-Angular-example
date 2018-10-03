@@ -1,0 +1,42 @@
+<div class="container">
+
+  <div class="card">
+    <div class="card-content">
+      <input class="autocomplete" [(ngModel)]="symbol" (ngModelChange)="onSearch()" style="display:inline-block;width:150px" />
+      <button class="btn" (click)="search()">
+        <i class="left material-icons">search</i>
+        Show
+      </button>
+
+      <div class="collection">
+        <a *ngFor="let result of searchResult" class="collection-item"  (click)="search()">
+          <div style="display:inline-block; margin-right:20px;">
+            {{result['2. name']}}
+          </div>
+
+          <span class="fullname blue">    {{result['1. symbol']}} </span>
+        </a>
+
+        <div *ngIf="isLoading" class="preloader-wrapper small active">
+          <div class="spinner-layer spinner-green-only">
+            <div class="circle-clipper left">
+              <div class="circle"></div>
+            </div><div class="gap-patch">
+              <div class="circle"></div>
+            </div><div class="circle-clipper right">
+              <div class="circle"></div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+
+
+    </div>
+  </div>
+
+  <div id="chart">
+
+  </div>
+</div>
